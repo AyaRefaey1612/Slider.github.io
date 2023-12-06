@@ -1,0 +1,106 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 800px;
+    position: relative;
+    margin: 10px auto;
+    height: 250px;
+  
+}
+img{
+    position: absolute;  
+    width: 500px;
+    height: 200px;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+}
+img.active{
+    opacity: 1;
+}
+.images p{
+    color: white;
+    position: absolute;
+    left: 11px;
+    background-color: #9e9e9ec2;
+    border: 1px solid;
+    border-radius: 6px;
+    width: 120px;
+    height: 26px;
+    text-align: center;
+    z-index: 6;
+}
+.buttons{
+    position: relative;
+    top: 217px;
+    right: 45px;
+    display: flex;
+    width: 600px;
+}
+.buttons .Previous{
+    background-color: #0000ff61;
+    border: 1px solid wheat;
+    border-radius: 6px;
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
+.buttons .Next{
+    background-color: #0000ff61;
+    border: 1px solid wheat;
+    border-radius: 6px;
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
+.buttons .numbers {
+    width: 60%;
+}
+
+.buttons .numbers ul{
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+.buttons .numbers ul li{
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin: 0 15px;
+  background-color: #f6f6f6;
+  color: #333;
+  font-weight: bold;
+  border-radius: 4px;
+  line-height: 28px;
+  cursor: pointer;
+}
+.one , .two , .three , .four , .five{
+    width: 25%;
+    cursor: pointer;
+}
+.buttons .numbers .active{
+    color: #0000ff87;
+    background-color: #9E9E9E;
+}
+
+.Previous.disabled,
+.Next.disabled{
+    opacity: .5;
+    cursor: no-drop;
+}
